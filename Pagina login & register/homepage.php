@@ -6,16 +6,16 @@ include("connect.php");
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Página incial</title>
 </head>
 <body>
     <div style="text-align:center; padding:15%;">
       <p  style="font-size:50px; font-weight:bold;">
-       Hello  <?php 
+       Olá  <?php 
        if(isset($_SESSION['email'])){
         $email=$_SESSION['email'];
         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
@@ -26,7 +26,8 @@ include("connect.php");
        ?>
        :)
       </p>
-      <a href="logout.php">Logout</a>
+      <a href="logout.php">Sair</a>
     </div>
 </body>
+
 </html>
